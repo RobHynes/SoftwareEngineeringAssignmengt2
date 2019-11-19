@@ -50,7 +50,7 @@ public class StudentTest {
 		CourseProgramme course = new CourseProgramme("Electronic and Computer Engineering", new DateTime(), new DateTime(), modules);
 		Student s1 = new Student("Rob", 21, new DateTime(), 54321, "Rob21", course, modules);
 		
-		assertEquals("Software Engineering III", s1.getAge());
+		assertEquals("21", s1.getAge());
 	}
 	
 	@Test
@@ -86,8 +86,8 @@ public class StudentTest {
 		Student s1 = new Student("Rob", 21, new DateTime(), 54321, "Rob21", course, modules);
 		s1.setID(52956);
 		
-		assertEquals(52956, s1.getDOB());
-		assertNotEquals(54321, s1.getDOB());
+		assertEquals(52956, s1.getID());
+		assertNotEquals(54321, s1.getID());
 	}
 	
 	@Test
@@ -97,7 +97,7 @@ public class StudentTest {
 		CourseProgramme course = new CourseProgramme("Electronic and Computer Engineering", new DateTime(), new DateTime(), modules);
 		Student s1 = new Student("Rob", 21, new DateTime(), 54321, "Rob21", course, modules);
 		
-		assertEquals(54321, s1.getDOB());
+		assertEquals(54321, s1.getID());
 	}
 	
 //	@Test
