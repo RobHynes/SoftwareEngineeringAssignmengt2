@@ -9,17 +9,17 @@ public class Student {
 	DateTime dateOfBirth;
 	int id;
 	String username;
-	String course;
-	String[] modules;
+	CourseProgramme course;
+	Module[] modules;
 	
-	public Student(String name, int age, DateTime DOB, int id, String username, String courseCode, String[] modArr)
+	public Student(String name, int age, DateTime DOB, int id, String username, CourseProgramme course, Module[] modArr)
 	{	
 		this.name = name;
 		this.age = age;
 		dateOfBirth = DOB;
 		this.id = id;
 		this.username = username;
-		course = courseCode;
+		this.course = course;
 		modules = modArr;
 	}
 	
@@ -74,22 +74,22 @@ public class Student {
 		return username;
 	}
 	
-	public void setCourse(String courseCode)
+	public void setCourse(CourseProgramme courseCode)
 	{
 		course = courseCode;
 	}
 	
-	public String getCourse()
+	public CourseProgramme getCourse()
 	{
 		return course;
 	}
 	
-	public void setModules(String[] l)
+	public void setModules(Module[] l)
 	{
 		modules = l;
 	}
 	
-	public String[] getModules()
+	public Module[] getModules()
 	{
 		return modules;
 	}
