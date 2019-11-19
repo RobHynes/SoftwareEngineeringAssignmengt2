@@ -50,7 +50,7 @@ public class StudentTest {
 		CourseProgramme course = new CourseProgramme("Electronic and Computer Engineering", new DateTime(), new DateTime(), modules);
 		Student s1 = new Student("Rob", 21, new DateTime(), 54321, "Rob21", course, modules);
 		
-		assertEquals("21", s1.getAge());
+		assertEquals(21, s1.getAge());
 	}
 	
 	@Test
@@ -148,12 +148,12 @@ public class StudentTest {
 	
 	public void testSetModules()
 	{
-		Module[] modules = {};
+		Module module = new Module("Software Engineering III", 4321, new Student[0], new CourseProgramme[0]);
+		Module[] modules = {module};
 		CourseProgramme course = new CourseProgramme("Electronic and Computer Engineering", new DateTime(), new DateTime(), modules);
 		Student s1 = new Student("Rob", 21, new DateTime(), 54321, "Rob21", course, modules);
 		Student[] studentArr = {s1};
 		CourseProgramme[] courseArr = {course};
-		Module module = new Module("Software Engineering III", 4321, studentArr, courseArr);
 		Module module1 = new Module("Machine Learning", 6789, studentArr, courseArr);
 		Module[] modules2 = {module1};
 		s1.setModules(modules2);

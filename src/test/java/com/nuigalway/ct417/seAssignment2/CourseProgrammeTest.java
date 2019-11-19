@@ -127,8 +127,8 @@ public class CourseProgrammeTest {
 		Module[] modules1 = {module1};
 		course.setModules(modules1);
 		
-		assertEquals(modules1, course.getModules()[0]);
-		assertNotEquals(modules, course.getModules()[0]);
+		assertEquals(module1, course.getModules()[0]);
+		assertNotEquals(module, course.getModules()[0]);
 	}
 	
 	@Test
@@ -145,7 +145,7 @@ public class CourseProgrammeTest {
 		Module[] modules1 = {module};
 		course.setModules(modules1);
 		
-		assertEquals(modules, course.getModules()[0]);
+		assertEquals(module, course.getModules()[0]);
 	}
 	
 }
