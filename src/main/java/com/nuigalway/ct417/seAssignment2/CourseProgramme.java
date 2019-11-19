@@ -5,18 +5,17 @@ import org.joda.time.DateTime;
 public class CourseProgramme {
 	
 	String name;
-	String[] modules;
-	String[] students;
+	Module[] modules;
+	Student[] students;
 	DateTime startDate;
 	DateTime endDate;
 	
-	public CourseProgramme(String name, DateTime startDate, DateTime endDate, String[] moduleList, String[] studentList)
+	public CourseProgramme(String name, DateTime startDate, DateTime endDate, Module[] moduleList)
 	{
 		this.name = name;
 		this.endDate = endDate;
 		this.startDate = startDate;
 		modules = moduleList;
-		students = studentList;
 	}
 	
 	public void setName(String n)
@@ -49,22 +48,22 @@ public class CourseProgramme {
 		return endDate;
 	}
 	
-	public void setStudents(String[] l)
+	public void setStudents(Student[] l)
 	{
 		students = l;
 	}
 	
-	public String[] getStudents()
+	public Student[] getStudents()
 	{
 		return students;
 	}
 	
-	public void setModules(String[] l)
+	public void setModules(Module[] l)
 	{
 		modules = l;
 	}
 	
-	public String[] getModules()
+	public Module[] getModules()
 	{
 		return modules;
 	}
